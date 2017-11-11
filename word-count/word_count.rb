@@ -1,4 +1,3 @@
-require 'pry'
 class Phrase
   attr_reader :phrase
 
