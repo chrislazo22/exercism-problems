@@ -1,8 +1,10 @@
+require 'pry'
 class Prime
   PRIMES = [0]
 
   def self.is_prime?(num)
     (2...num).each do |divisor|
+      binding.pry
       return false if num % divisor == 0
     end
   end
