@@ -1,12 +1,17 @@
+require 'pry'
 class ETL
-  old = {
-    1 => ["A", "E"]
-  }
   def self.transform(old)
     new_code = {}
-    old.each do |score, letter|
-      new_code[letter[0].downcase] = score
+
+    old.each do |score, letters|
+      letters.each do |letter|
+        new_code[letter.downcase] = score
+      end
     end
     new_code
   end
+end
+
+module BookKeeping
+  VERSION = 1
 end
