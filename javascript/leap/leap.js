@@ -1,8 +1,5 @@
-export const isLeap = function(year) {
-    if (year % 4 == 0) {
-        if (year % 100 !== 0 || year % 400 == 0) {
-             return true;
-        }
+export const isLeap = (year) => {
+    if (year % 4 == 0 && ((year % 100 !== 0 || year % 400 == 0))) {
+        return true;
     }
-    return false;
 }
